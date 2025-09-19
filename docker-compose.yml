@@ -1,7 +1,6 @@
-version: "3.9"
 services:
   pdf_service:
-    image: huridocs/pdf-document-layout-analysis:latest
+    image: huridocs/pdf-document-layout-analysis:v0.0.19
     container_name: pdf_service
     ports:
       - "5060:5060"

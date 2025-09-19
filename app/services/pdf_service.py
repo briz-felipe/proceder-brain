@@ -1,6 +1,6 @@
 import requests
 from typing import Dict, Any
-from ..core.config import settings
+from core.config import settings
 
 class PDFService:
     def __init__(self):

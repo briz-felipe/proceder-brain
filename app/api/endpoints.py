@@ -1,8 +1,8 @@
 from fastapi import APIRouter, UploadFile, HTTPException
-from ..schemas.pdf import UploadResponse, QueryResponse
-from ..services.pdf_service import PDFService
-from ..services.vector_service import VectorService
-from ..models.document import DocumentProcessor
+from schemas.pdf import UploadResponse, QueryResponse
+from services.pdf_service import PDFService
+from services.vector_service import VectorService
+from models.document import DocumentProcessor
 
 router = APIRouter()
 pdf_service = PDFService()

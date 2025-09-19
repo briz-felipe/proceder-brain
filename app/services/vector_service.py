@@ -5,7 +5,7 @@ from langchain.embeddings import SentenceTransformerEmbeddings
 from langchain.chains import RetrievalQA
 from langchain.llms import OpenAI
 from typing import List, Optional
-from ..core.config import settings
+from core.config import settings
 
 class VectorService:
     def __init__(self):
