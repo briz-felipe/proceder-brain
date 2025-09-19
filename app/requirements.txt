@@ -1,5 +1,6 @@
 fastapi
 uvicorn[standard]
+langchain-community
 requests
 langchain
 faiss-cpu 

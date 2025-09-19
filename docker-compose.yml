@@ -1,15 +1,12 @@
 services:
   pdf_service:
-    image: huridocs/pdf-document-layout-analysis:v0.0.19
+    image: huridocs/pdf-document-layout-analysis:v0.0.24
     container_name: pdf_service
     ports:
       - "5060:5060"
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - capabilities: [gpu]  # se tiver GPU
-    command: make start_no_gpu   # troque por `make start` se tiver GPU
+    environment:
+      - PYTHONPATH=/app
+    command: "./start.sh"
 
   app:
     build: ./app
