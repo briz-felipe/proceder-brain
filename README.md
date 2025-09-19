@@ -71,14 +71,27 @@ Resposta:
 ## 📂 Estrutura do projeto
 
 ```
-pdf_pipeline/
-│
-├── docker-compose.yml      # Orquestra os containers
-├── pdf-service/            # Serviço de PDF (usa imagem oficial)
-└── app/                    # API FastAPI + LangChain
-    ├── Dockerfile
-    ├── requirements.txt
-    └── main.py
+app/
+├── core/
+│   ├── config.py          # Configurações centralizadas
+│   └── __init__.py
+├── schemas/
+│   ├── pdf.py             # Modelos Pydantic para validação
+│   └── __init__.py
+├── models/
+│   ├── document.py        # Lógica de processamento de documentos
+│   └── __init__.py
+├── services/
+│   ├── pdf_service.py     # Serviço para comunicação com PDF API
+│   ├── vector_service.py  # Serviço para embeddings e queries
+│   └── __init__.py
+├── api/
+│   ├── endpoints.py       # Endpoints da API
+│   └── __init__.py
+├── main.py               # Aplicação FastAPI principal
+├── requirements.txt      # Dependências atualizadas
+└── .env.example         # Exemplo de variáveis de ambiente
+
 ```
 
 ---
